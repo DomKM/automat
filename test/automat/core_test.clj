@@ -100,6 +100,12 @@
     [1 a/any (a/$ :conj) 3 4 (a/$ :conj)]
     [[2 4] [1 2 3 4]]
 
+    (a/interpose-$ :conj (vec "abc"))
+    [(vec "abc") (vec "abc")]
+
+    (a/interpose-$ :conj [\a :b "c"])
+    [[\a :b "c"] [\a :b "c"]]
+
     [(a/or
        (a/interpose-$ :conj [1 2 3])
        [4])
